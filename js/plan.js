@@ -54,7 +54,7 @@ function drawTable(items) {
 
     items.length < 1 ? $("#table").css('display', 'none') : $("#table").css('display', '');
 
-    
+
     var table = document.getElementById('tableContents');
 
     var tableContents = '';
@@ -62,10 +62,10 @@ function drawTable(items) {
         tableContents += '<tr><td>' + element.kolegij + '</td><td>' + element.ects + '</td><td>' + element.sati + '</td><td>'
             + element.predavanja + '</td><td>' + element.vjezbe + '</td><td>' + element.tip + '</td>';
         tableContents += "<td><button id='" + element.id + "' onclick = 'removeItem(" + element.id + ")' class='btn btn-danger'> Obriši</button></td></tr>";
-        
+
     });
-    var td = "</td><td>"; 
-    tableContents += "<tfoot><td><b>Ukupno:</b>" + td + items.sum("ects") + td + items.sum("sati") +"<td colspan='4'></td></tfoot>";
+    var td = "</td><td>";
+    tableContents += "<tfoot><td><b>Ukupno:</b>" + td + items.sum("ects") + td + items.sum("sati") + "<td colspan='4'></td></tfoot>";
     table.innerHTML = tableContents;
 }
 
@@ -78,7 +78,7 @@ function removeItem(val) {
 
 Array.prototype.sum = function (prop) {
     var total = 0
-    for ( var i = 0, _len = this.length; i < _len; i++ ) {
+    for (var i = 0, _len = this.length; i < _len; i++) {
         total += this[i][prop]
     }
     return total

@@ -5,7 +5,7 @@ $(function () {
         location.href = "index.html#contact";
 
     })
-    
+
     if (window.location.hash == "#contact") {
         $('#contact').modal('show');
     }
