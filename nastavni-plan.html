@@ -9,10 +9,15 @@
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="node_modules/aos/dist/aos.js"></script>
+ 
+
     <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="./node_modules/easy-autocomplete/dist/easy-autocomplete.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="js/plan.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/common.js"></script>
+    <script src="./node_modules/easy-autocomplete/dist/jquery.easy-autocomplete.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
@@ -39,11 +44,11 @@
                                 nama</span></a>
                     </li>
                     <li class="nav-item  m-4">
-                        <a class="nav-link active" aria-current="page" href="#"><i
+                        <a class="nav-link " aria-current="page" href="novosti.html"><i
                                 class="fa fa-info orange m-2"></i><span>Novosti</span></a>
                     </li>
                     <li class="nav-item  m-4">
-                        <a class="nav-link " aria-current="page" href="nastavni-plan.html"><i
+                        <a class="nav-link active" aria-current="page" href="#"><i
                                 class="fa fa-book orange m-2"></i><span>Nastavni plan</span></a>
                     </li>
                     <li class="nav-item  m-4">
@@ -55,34 +60,50 @@
         </div>
     </nav>
     
+    
     <div data-aos="zoom-in-up" class="container-fluid novosti-title" id="novosti-div">
-        <div class="d-flex justify-content-center fs-1 fw-bold">Novosti</div>
+        <div class="d-flex justify-content-center fs-1 fw-bold">Nastavni plan</div>
         <div class="d-flex justify-content-center">
             <hr class="hr-about">
         </div>
     </div>
-    <div class="container-fluid bg--grey novosti-circles" id="">
+
+    <div class="container-fluid" id="novost1">
         <div class="row">
-            <div class="col">
+            <div class="col-sm-1 col-md-1 col-lg-1">
             </div>
-            <div class="col-sm-3 col-md-3 col-lg-3 text-black grey-rounded-card" data-aos="fade-up-right" data-aos-duration="1500" >
-                <a href="novost-1.html"><img class="img-fluid rounded-circle circle-photo" src="./assets/img/novost1.jpg">
-                <div class="centered-zaiskri yellow--text rounded-text">&nbsp;&nbsp;&nbsp;28.08.2019 <br /><div class="white--text rounded-text">Student Josip Stanešić 12. je sistemaš svijeta i dobitnik medalje...</div></div></a>
+            <div class="col-sm-5 col-md-5 col-lg-5" data-aos="fade-left"data-aos-offset="500"  data-aos-duration="3000" >
+                <form>
+                    <div class="form-group">
+                      <label for="nazivKolegija">Naziv kolegija</label>
+                      <input type="text" class="form-control" id="nazivKolegija" aria-describedby="Naziv kolegija" placeholder="">
+                      <small id="kolegijHelp" class="form-text text-muted">Započnite unos naziva kolegija...</small>
+                    </div>
+                </form>
             </div>
-            <div class="col-sm-3 col-md-3 col-lg-3 text-black grey-rounded-card" data-aos="fade-up-right" data-aos-duration="2100">
-                <a href="novost-2.html"><img class="img-fluid rounded-circle circle-photo" src="./assets/img/novost2.jpg">
-                <div class="centered-zaiskri yellow--text rounded-text">&nbsp;&nbsp;&nbsp;22.07.2019<br /><div class="white--text rounded-text">Nagrađujemo izvrsnost! Objavljemo dobitnike stipendije..</div></div></a>
+            <div class="col-sm-5 col-md-5 col-lg-5">
+                <table class="table table-bordered mt-4 " id="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Kolegij</th>
+                        <th scope="col">ECTS</th>
+                        <th scope="col">Sati</th>
+                        <th scope="col">P</th>
+                        <th scope="col">V</th>
+                        <th scope="col">Tip</th>
+                        <th scope="col">Brisanje</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableContents"></tbody>
+                  </table>
             </div>
-            <div class="col-sm-3 col-md-3 col-lg-3 text-black grey-rounded-card" data-aos="fade-up-right" data-aos-duration="2600">
-                <a href="novost-3.html"><img class="img-fluid rounded-circle circle-photo" src="./assets/img/novost3.jpg">
-                <div class="centered-zaiskri yellow--text rounded-text">&nbsp;&nbsp;&nbsp;18.04.2019 <br /><div class="white--text rounded-text">Digitalno Junior ljeto</div></div></a>
-            </div>
-            <div class="col">
+            <div class="col-sm-1 col-md-1 col-lg-1">
             </div>
         </div>
     </div>
+    <div class="empty-space-310"></div>
     <div class="container-zaiskri">
-        <img src="./assets/img/zaiskri-bg.jpg" class="img-fluid"  alt="zaiskri">
+        <img src="./assets/img/zaiskri-bg.jpg" class="img-fluid" s alt="zaiskri">
         <div class="centered-zaiskri white--text fw-5 fs-1">BUDI IZVRSTAN U ONOM ŠTO VOLIŠ <br /><div class="fw-5 danger--text danger--shadow">ZAISKRI</div></div>
     </div>
 </body>

@@ -14,9 +14,11 @@
     <script src="http://textillate.js.org/assets/jquery.lettering.js"></script>
     <script src="http://textillate.js.org/jquery.textillate.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/common.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="https://www.algebra.hr/wp-content/themes/algebra/favicon.ico">
 </head>
 
 <body>
@@ -35,7 +37,8 @@
                                 class="fa fa-home orange m-2"></i><span>Početna</span></a>
                     </li>
                     <li class="nav-item  m-4">
-                        <a class="nav-link " href="about.html" aria-current="page" href="#"><i class="fa fa-address-card orange m-2"></i><span>O
+                        <a class="nav-link " href="about.html" aria-current="page" href="#"><i
+                                class="fa fa-address-card orange m-2"></i><span>O
                                 nama</span></a>
                     </li>
                     <li class="nav-item  m-4">
@@ -43,37 +46,91 @@
                                 class="fa fa-info orange m-2"></i><span>Novosti</span></a>
                     </li>
                     <li class="nav-item  m-4">
-                        <a class="nav-link " aria-current="page" href="#"><i
+                        <a class="nav-link " aria-current="page" href="nastavni-plan.html"><i
                                 class="fa fa-book orange m-2"></i><span>Nastavni plan</span></a>
                     </li>
                     <li class="nav-item  m-4">
-                        <a class="nav-link " aria-current="page" href="#"><i
-                                class="fa fa-phone orange m-2"></i><span>Kontakt</span></a>
+                        <a class="nav-link " aria-current="page" data-bs-toggle="modal" data-bs-target="#contact"
+                            href="#contact"><i class="fa fa-phone orange m-2"></i><span>Kontakt</span></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="jumbotron">
-        <video id="video-background" preload muted autoplay loop>
+
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="./assets/video/typingOnlaptop.mp4" type="video/mp4">
-
         </video>
-        <div class="d-flex justify-content-center margin-top">
-
-            <h1 class="tlt">
-                <ul class="texts">
-                    <li>Budi izvrstan u onom što vidiš!</li>
-                    <li>... u onom što voliš!</li>
-                    <li>ZAISKRI!</li>
-                </ul>
-            </h1>
+        <div class="container h-100 text-white">
+            <div class="d-flex justify-content-center margin-top">
+                <h1 class="tlt">
+                    <ul class="texts">
+                        <li>Budi izvrstan u onom što vidiš!</li>
+                        <li>... u onom što voliš!</li>
+                        <li>ZAISKRI!</li>
+                    </ul>
+                </h1>
+            </div>
         </div>
+    </header>
+    <div class="modal indexmodal fade modal-dialog  modal-dialog-centered" id="contact" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel"><i class="fa fa-envelope contact-icon fs-2"></i>
+                        Kontaktirajte nas!</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="removeHash"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" target="_blank" action="http://www.fulek.com/VUA/SUPIT/ContactUs">
+                        <div class="mb-3">
+                            <label for="imeInput" class="form-label">Puno ime</label>
+                            <input type="text" class="form-control" name="name" id="imeInput"
+                                placeholder="Unesite vaše ime i prezime..." autocomplete="off" required="required">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" required="required">
+                            <div id="emailHelp" class="form-text">Email mora sadržavati <b>"@"</b>.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="select1" class="form-label">Važnost poruke</label>
+                            <select class="form-select" name="importance" aria-label="Vaznost poruke" id="select1">
+
+                                <option value="1">Visoka</option>
+                                <option value="2">Niska</option>
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-floating">
+                                <textarea class="form-control" name="message" placeholder="Leave a comment here"
+                                    id="floatingTextarea2" style="height: 100px" required="required"></textarea>
+                                <label for="floatingTextarea2">Vaša poruka</label>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" name="newsletter" for="exampleCheck1">Primaj
+                                newsletter</label>
+                        </div>
 
 
-
-
-
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="removeHashCancelBtn"
+                        data-bs-dismiss="modal">Odustani</button>
+                    <button type="submit" class="btn btn-primary">Pošalji</button>
+                </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 

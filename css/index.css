@@ -26,21 +26,7 @@ nav>div>.navbar>ul>li>a>span:hover {
     color: rgb(241, 222, 45);
 }
 
-.jumbotron {
-    position: relative;
-    z-index: -101;
-}
 
-#video-background {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
-    width: 100%;
-}
 
 .margin-top {
     margin-top: 300px;
@@ -107,13 +93,16 @@ nav>div>.navbar>ul>li>a>span:hover {
 }
 
 hr.hr-about {
-    border: 2px solid #df9400;
+    border: 2px solid #ffaa00;
     border-radius: 2px;
     width: 40%;
+    opacity: 0.5;
 }
+
 .text--height {
     line-height: 2.3;
 }
+
 .danger--text {
     font-weight: bold;
     font-size: xx-large;
@@ -124,6 +113,7 @@ hr.hr-novost {
     border: 2px solid #df9400;
     border-radius: 2px;
     width: 60%;
+    opacity: 0.5;
 }
 
 .yellow--text {
@@ -135,6 +125,7 @@ hr.hr-novost {
     font-weight: bold;
     color: #d67900;
 }
+
 
 .dark--text {
     font-weight: bold;
@@ -152,6 +143,10 @@ hr.hr-novost {
     margin-top: 20px;
 }
 
+.empty-space-310 {
+    height: 310px;
+}
+
 .text-dancing {
     font-family: 'Dancing Script', cursive;
     font-size: 24px;
@@ -159,6 +154,11 @@ hr.hr-novost {
 
 .empty-space-100 {
     height: 100px;
+}
+
+.modal.indexmodal {
+    top: 0 !important;
+    display: none;
 }
 
 * {
@@ -208,9 +208,11 @@ h4.do-nas-title {
     font-weight: bolder;
 }
 
-.do-nas-icon {
+.do-nas-icon,
+.contact-icon {
     color: rgb(62, 62, 212);
 }
+
 
 .white--text {
     color: #fff;
@@ -280,4 +282,52 @@ h4.do-nas-title {
 
 .gallery-card {
     filter: drop-shadow(0px 5px 3px rgb(29, 29, 29));
+}
+
+/* video responsive */
+
+header {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('../assets/video/typingOnlaptop.mp4') black no-repeat center center scroll;
+    }
 }
