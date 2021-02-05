@@ -1,0 +1,234 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+.leftSpacing {
+    margin-left: 60px;
+}
+
+.orange {
+    color: orange;
+}
+
+.black-background {
+    background-color: black;
+}
+
+.logo-size {
+    width: 60px;
+}
+
+nav>div>.navbar>ul>li>a>span:hover {
+    color: rgb(241, 222, 45);
+}
+
+.jumbotron {
+    position: relative;
+    z-index: -101;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    width: 100%;
+}
+
+.margin-top {
+    margin-top: 300px;
+}
+
+#fadeAnimation {
+    width: 700px;
+
+}
+
+.about-photo {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.about-text {
+    height: 300px;
+    padding: 70px;
+    display: none;
+}
+
+.novosti-text {
+    height: 300px;
+    padding: 70px;
+}
+.novosti-title {
+    padding: 70px;
+}
+
+hr.hr-about {
+    border: 2px solid #df9400;
+    border-radius: 2px;
+    width: 40%;
+}
+
+.danger--text {
+    font-weight: bold;
+    font-size: xx-large;
+    color: #a30208;
+}
+
+.yellow--text {
+    font-weight: bold;
+    color:rgb(241, 222, 45)
+}
+
+.orange--text {
+    font-weight: bold;
+    color: #d67900;
+}
+
+.dark--text {
+    font-weight: bold;
+    color: #20201f;
+}
+
+.bolt-icon {
+    padding: 10px;
+}
+
+.bg--grey {
+    background-color: #ebebeb;
+    height: 100%;
+    padding: 50px;
+    margin-top: 20px;
+}
+
+.text-dancing {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+}
+
+.empty-space-100 {
+    height: 100px;
+}
+
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.empty-space-810 {
+    height: 810px;
+    display: none;
+}
+
+.empty-space-110 {
+    height: 110px;
+}
+
+.overflow-y {
+    overflow-y: scroll;
+}
+
+.fixed-height>div>div {
+    min-height: 100px;
+}
+
+.cert-images>div>div>img {
+    height: 70px;
+}
+
+.empty-space-75 {
+    height: 75px;
+}
+
+.location-background-image {
+
+    padding-top: 100px;
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url('../assets/img/kakoDoNas.jpg');
+    height: 1300px;
+
+}
+
+h4.do-nas-title {
+    padding: 20px;
+    background-color: white;
+    font-weight: bolder;
+}
+
+.do-nas-icon {
+    color: rgb(62, 62, 212);
+}
+
+.white--text {
+    color: #fff;
+}
+.rounded-text {
+    width: 170px;
+    margin-left: 12px;
+}
+.do-nas-card {
+    height: 720px;
+}
+
+#map {
+    height: 100%;
+}
+
+#wrapper {
+    height: 100%;
+}
+
+.container-zaiskri {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.container-zaiskri>img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.danger--shadow {
+    text-shadow: 2px 2px #000000;
+}
+
+.centered-zaiskri {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#novosti-div {
+    bottom: 0px2;
+}
+
+.circle-photo {
+    padding-top: 10px;
+    object-fit: cover;
+    width: 250px;
+    height: 200px;
+    margin: auto;
+    display: block;
+}
+
+.grey-rounded-card {
+    background: rgb(255, 255, 255);
+    width: 260px;
+    height: 210px;
+    border-radius: 55%;
+    filter: drop-shadow(0px 5px 3px rgb(29, 29, 29));
+    margin: 50px;
+}
