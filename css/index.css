@@ -57,6 +57,40 @@ nav>div>.navbar>ul>li>a>span:hover {
     height: 250px;
 }
 
+.novost-photo {
+    object-fit: cover;
+    width: 100%;
+    height: 516px;
+}
+
+.novost-photo-text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.container-novost {
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container-novost>img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    max-height: 350px;
+}
+
 .about-text {
     height: 300px;
     padding: 70px;
@@ -67,6 +101,7 @@ nav>div>.navbar>ul>li>a>span:hover {
     height: 300px;
     padding: 70px;
 }
+
 .novosti-title {
     padding: 40px;
 }
@@ -76,16 +111,24 @@ hr.hr-about {
     border-radius: 2px;
     width: 40%;
 }
-
+.text--height {
+    line-height: 2.3;
+}
 .danger--text {
     font-weight: bold;
     font-size: xx-large;
     color: #a30208;
 }
 
+hr.hr-novost {
+    border: 2px solid #df9400;
+    border-radius: 2px;
+    width: 60%;
+}
+
 .yellow--text {
     font-weight: bold;
-    color:rgb(241, 222, 45)
+    color: rgb(241, 222, 45)
 }
 
 .orange--text {
@@ -172,10 +215,12 @@ h4.do-nas-title {
 .white--text {
     color: #fff;
 }
+
 .rounded-text {
     width: 170px;
     margin-left: 12px;
 }
+
 .do-nas-card {
     height: 720px;
 }
@@ -231,4 +276,8 @@ h4.do-nas-title {
     border-radius: 55%;
     filter: drop-shadow(0px 5px 3px rgb(29, 29, 29));
     margin: 50px;
+}
+
+.gallery-card {
+    filter: drop-shadow(0px 5px 3px rgb(29, 29, 29));
 }
